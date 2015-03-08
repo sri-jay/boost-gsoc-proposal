@@ -1,6 +1,15 @@
 # Enhanced Vector and Deque Containers
-####Proposal for Boost GSoC '15
+####Proposal for Google Summer of Code 2015
 
+##Personal details
+* Name: Sandilya Jandhyala
+* College/University: Amrita School of Engineering, Bengaluru, India (Amrita Vishwa Vidyapeetham university)
+* Major/Course: Computer Science and Engineering
+* Degree Program: B. Tech.
+* Email: jysandilya@gmail.com
+
+##Availability
+I intend to spend 30-40 hours per week on GSoC. My college reopens on July 23, so from then on I will probably be able to spend only around 10-20 hours per week due to coursework. In view of this, I have tried to schedule my work (see the [schedule](#schedule)) so that the core of my project will be finished before July 23, and the last three weeks will be dedicated to testing, writing documentation and other cleanup work.
 
 ##Introduction
 Taken from the [Boost GSoC '15 wiki:](https://svn.boost.org/trac/boost/wiki/SoC2015#a5.Enhancedvectoranddequecontainers)
@@ -165,7 +174,59 @@ There are no trade-offs or shortcomings as such. **controlled_deque** can be use
 * **controlled_deque** along with its segmented iterator and the described member functions
 * Tests and documentation for **devector** and **controlled_deque**
 
+##<a name="schedule"></a>Estimated work schedule
+* Weeks 1, 2: Familiarization with Boost development tools and codebase, in particular studying the **stable_vector** and **deque** classes. Finalization of working plan and skeleton code.
+* Weeks 3, 4, 5, 6: Develop the **devector** class. This includes writing tests and documentation.
+* Weeks 7, 8, 9, 10: Develop the **controlled_deque** class. This includes writing tests and documentation.
+* Weeks 11, 12, 13: Finalize work. Finish tests, complete documentation and examples and perform any other cleanup work.
 
+##Additional work items
+These will be implemented if time permits.  
+* STL algorithms optimized for **controlled_deque** using segmented iterators
+
+##Background information
+
+###Education
+I am currently pursuing my B. Tech. in Computer Science and Engineering from Amrita School of Engineering, Bengaluru, India. I'm currently in my third year of study (out of four).
+
+###My interest in Boost and this project
+The Boost C++ Libraries have eased the lives of countless developers around the world, including myself. I would like to contribute back to the community through this project. I have not contributed to open source before, and this project would be my first contribution. I think that this project is genuinely needed, since C++ is about putting control in the hands of the programmer, and this project aims to help in doing just that. I also have much to learn about C++ and software development, and I believe that this would be a great learning experience. Though I have used C++ libraries this is the first time I am writing such a library.  
+Unfortunately, my coursework would likely prevent me from making any substantial contributions to Boost after GSoC. However I think that this would be a great first step, and I would definitely be interested in contributing further in the more distant future.
+
+###Technical Skills
+* C++ 98/03 (traditional C++): 4/5  
+ I am familiar with traditional C++ except for template metaprogramming.
+
+* C++ 11/14 (modern C++): 3/5  
+ I am familiar with the use of ``` auto```, range-based for loops, initializer lists and lambda expressions. I have also used generic lambdas. I am slightly familiar with move semantics. I am not familiar with variadic templates or template metaprogramming.
+
+ * C++ Standard Library: 2.5 / 5  
+ I am familiar with and have used the STL (containers, iterators and algorithms). I am much less familiar with multithreading libraries (except for ``` std::future``` and ``` std::async```) and other miscellaneous libraries.
+
+* Boost C++ Libraries: 2 / 5  
+ I have used only basic features of the Boost.GIL and the Boost.program_options libraries. I've used Boost.lexical_cast for conversions to ``` std::string```. I have basic knowledge of the Boost.Test framework.
+
+* Git: 3 / 5  
+ I use Git for most of my projects. I can commit, push to a remote, resolve merge conflicts and create and check out different branches.
+
+#####Development environments
+* On Linux, I have some familiarity with KDevelop. But I prefer to code in a text editor such as Atom and build from the command line with CMake I use Clang 3.5.0 with libstdc++v3 (released with gcc 4.9.2).
+* On Windows, I use Visual Studio 2013. I am moderately proficient with Visual Studio.
+
+#####Documentation tools
+I have not yet used any documentation tool. However I aim to become familiar enough with Doxygen by the starting of GSoC that I can learn more on the job if necessary.
+
+###Programming interests
+I am mainly interested in the fields of computer graphics and image processing. I have some knowledge of DirectX 11. I also have projects written in other languages. I do web development in Python using the Flask framework. I have used C# with WPF to develop desktop applications. I even have some experience with the Microsoft Kinect SDK.
+
+##Programming Competency
+The following are some examples of my work in C++.
+
+####[Sandtrace](https://github.com/jysandy/sandtrace)
+Sandtrace is an image synthesis system which uses recursive ray-tracing to generate photorealistic images.
+
+####[FBXViewer](https://github.com/jysandy/fbxviewer)
+FBXViewer is an application which loads and renders 3D models from FBX files in real-time. FBXViewer depends on a lot of shared code present in my [DX11Lib](https://github.com/jysandy/dx11lib) project.
 
 [stable-vector]: http://www.boost.org/doc/libs/1_57_0/doc/html/container/non_standard_containers.html#container.non_standard_containers.stable_vector
 
