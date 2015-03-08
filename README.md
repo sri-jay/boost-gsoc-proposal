@@ -200,7 +200,7 @@ Unfortunately, my coursework would likely prevent me from making any substantial
 * C++ 11/14 (modern C++): 3/5  
  I am familiar with the use of ``` auto```, range-based for loops, initializer lists and lambda expressions. I have also used generic lambdas. I am slightly familiar with move semantics. I am not familiar with variadic templates or template metaprogramming.
 
- * C++ Standard Library: 2.5 / 5  
+* C++ Standard Library: 2.5 / 5  
  I am familiar with and have used the STL (containers, iterators and algorithms). I am much less familiar with multithreading libraries (except for ``` std::future``` and ``` std::async```) and other miscellaneous libraries.
 
 * Boost C++ Libraries: 2 / 5  
