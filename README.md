@@ -20,7 +20,7 @@ Certain applications (for example, intrusive containers, as noted [here](https:/
 ## The devector container
 Reference stability is not a new concept; a reference-stable of std::vector in fact already exists within Boost ([**stable_vector**][stable-vector]). However, **stable_vector** still lacks an _O(1)_ time ```push_front()```. Qt, however, offers the [**QList**](http://doc.qt.io/qt-5/qlist.html#details) class, which offers [amortized constant-time insertion](doc.qt.io/qt-5/containers.html#algorithmic-complexity) at both the beginning and the end of the vector along with reference stability. It achieves this by preallocating space at both the front and the back of the underlying array. But the **QList** class lacks the ``` shrink_to_fit()``` function, which reduces the capacity of the vector to match its size. Thus the **QList**'s internal array never shrinks, and this may lead to wasted memory.
 
-My proposed **devector** container is mostly the same as Boost's **stable_vector**, with the preallocated memory features borrowed from Qt's **QList**. Thus, **devector** is reference-stable and also offers _O(1)_ time insertion at the front.A simplified class definition of **devector** is shown below:
+My proposed **devector** container is mostly the same as Boost's **stable_vector**, with the preallocated memory features borrowed from Qt's **QList**. Thus, **devector** is reference-stable and also offers _O(1)_ time insertion at the front. A simplified class definition of **devector** is shown below:
 
 ```
 template <class T, class Allocator = std::allocator<T>>
