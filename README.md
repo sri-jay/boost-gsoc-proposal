@@ -71,7 +71,7 @@ private:
  Destroys the element at the front of the vector.
 
 3. ``` template <class... Args> void emplace_front(Args&& args)```  
- Constructs an element at the front of the vector with ``` args``` forwarded. it triggers a reallocation if there is no more space at      the front.
+ Constructs an element at the front of the vector with ``` args``` forwarded. It triggers a reallocation if there is no more space at      the front.
 
 4. ``` void reserve_front(size_type n)```  
  Reserves enough memory for ``` n``` elements at the front of the vector by reallocating the underlying array.
