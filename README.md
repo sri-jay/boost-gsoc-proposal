@@ -67,19 +67,19 @@ private:
 1. ``` void push_front(const value_type& val)```  
  This inserts the given element at the front of the vector. It triggers a reallocation if there is no more space at the front.
 
-2. ```c++ void pop_front()```  
+2. ``` void pop_front()```  
  Destroys the element at the front of the vector.
 
-3. ```c++ template <class... Args> void emplace_front(Args&& args)```  
+3. ``` template <class... Args> void emplace_front(Args&& args)```  
  Constructs an element at the front of the vector with ``` args``` forwarded. It triggers a reallocation if there is no more space at      the front.
 
-4. ```c++ void reserve_front(size_type n)```  
+4. ``` void reserve_front(size_type n)```  
  Reserves enough memory for ``` n``` elements at the front of the vector by reallocating the underlying array.
 
-5. ```c++ void reserve_back(size_type n)```  
+5. ``` void reserve_back(size_type n)```  
  Reserves enough memory for ``` n``` elements at the back of the vector by reallocating the underlying array. This function is similar to ``` std::vector::reserve()```.
 
-6. ```c++ void reserve(size_type n)```  
+6. ``` void reserve(size_type n)```  
  Reserves enough memory for ``` (n / 2)``` elements at the front of the vector, and ``` ceil(n / 2.0f)``` at the back of the vector. This function reallocates the underlying array only once and is more efficient than calling ``` reserve_front()``` followed by ``` reserve_back()```.
 
 ###Implementation details
