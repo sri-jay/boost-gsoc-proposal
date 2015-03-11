@@ -22,7 +22,7 @@ Reference stability is not a new concept; a reference-stable of std::vector in f
 
 My proposed **devector** container is mostly the same as Boost's **stable_vector**, with the preallocated memory features borrowed from Qt's **QList**. Thus, **devector** is reference-stable and also offers _O(1)_ time insertion at the front. A simplified class definition of **devector** is shown below:
 
-```C++
+```
 template <class T, class Allocator = std::allocator<T>>
 class devector
 {
@@ -67,19 +67,19 @@ private:
 1. ``` void push_front(const value_type& val)```  
  This inserts the given element at the front of the vector. It triggers a reallocation if there is no more space at the front.
 
-2. ```c++ void pop_front()```  
+2. ``` void pop_front()```  
  Destroys the element at the front of the vector.
 
-3. ```c++ template <class... Args> void emplace_front(Args&& args)```  
+3. ``` template <class... Args> void emplace_front(Args&& args)```  
  Constructs an element at the front of the vector with ``` args``` forwarded. It triggers a reallocation if there is no more space at      the front.
 
-4. ```c++ void reserve_front(size_type n)```  
+4. ``` void reserve_front(size_type n)```  
  Reserves enough memory for ``` n``` elements at the front of the vector by reallocating the underlying array.
 
-5. ```c++ void reserve_back(size_type n)```  
+5. ``` void reserve_back(size_type n)```  
  Reserves enough memory for ``` n``` elements at the back of the vector by reallocating the underlying array. This function is similar to ``` std::vector::reserve()```.
 
-6. ```c++ void reserve(size_type n)```  
+6. ``` void reserve(size_type n)```  
  Reserves enough memory for ``` (n / 2)``` elements at the front of the vector, and ``` ceil(n / 2.0f)``` at the back of the vector. This function reallocates the underlying array only once and is more efficient than calling ``` reserve_front()``` followed by ``` reserve_back()```.
 
 ###Implementation details
@@ -92,7 +92,7 @@ Since **devector** is an array of pointers, it will need a node type **devector:
 ##The controlled_deque container
 The main new feature of the **controlled_deque** container is the segmented iterator. Segmented iterators (as described [here][segmented-iterators]) are iterators which expose the underlying segments of the deque. **controlled_deque** will also allow the user to specify the size of the segments in advance. It will also have ``` reserve()``` functions similar to those in **devector**. Thus, **controlled_deque** puts more control in the hands of the user. A simplified class definition is given below:
 
-```c++
+```
 template <class T, class Allocator = std::allocator<T>>
 class controlled_deque
 {
